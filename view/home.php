@@ -1,4 +1,12 @@
-
+<?php 
+try{
+$db = new PDO('mysql:host=localhost;dbname=adambook', 'root', ''); 
+}
+catch(Exception $e)
+{
+	die('erreur: '.$e->getMessage());
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +17,9 @@
   </head>
   <body>
 	Hi! <?php echo $_SESSION['username'];
-	 $read=$db->query('SELECT * FROM posts LIMIT 0,5 DESC');
+	 $read=$db->query('SELECT * FROM posts ORDER BY date DESC LIMIT 0,5');
 	while($data = $read->fetch()){
-echo $data['title'] . "By" . $data['author'] . "<br/>" . $data['content'] . "<br/>"; 	
+echo $data['title'] . " By " . $data['author'] . "<br/>" . $data['content'] . "<br/>" . echo "<i>" . $data['date']. echo "</i>"; 	
 }
 	
 ?>
