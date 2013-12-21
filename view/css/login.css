@@ -1,0 +1,44 @@
+body {
+font-family:arial,sans-serif;
+background-image:url("view/img/brushed.png");
+font-size:16px;
+padding:0;
+margin:0;
+}
+
+#topbar {
+margin:0;
+height:79px;
+border:2px solid black; 
+}
+
+a{
+height:79px;
+width:228px;
+
+line-height:79px;
+text-decoration:none;
+float:left;
+color:#AAAAAA;
+display:block;
+font-size:24px;
+border:1px solid black;
+text-align:center;
+}
+a:visited{
+color:#AAAAAA;
+
+}
+a:hover{
+color:#000000;
+background-color:#AAAAAA;
+
+}
+
+img.logo{
+float:left;
+border:1px solid black;
+
+
+
+}
